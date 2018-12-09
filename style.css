@@ -1,0 +1,22 @@
+.body{
+  height: 100%;
+}
+.row{
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.p-0{
+  padding: 0;
+  height: 100vh;
+}
+.img-responsive{
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#map {
+  height: 100vh; 
+}

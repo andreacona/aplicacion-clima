@@ -2,39 +2,57 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- jquery 3.3.1 -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-  <script type="text/javascript" src="app.js"></script>
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-    <h1 class="text-center">Google Maps APP</h1>
+
     <div class="row">
-      <div class="col-md-4">
-        <div class="form-gruop">
-          <select class="form-control" id="select">
-            <option>Seleccione una Ubicación</option>
-            <option value="">Santiago, Región Metropolitana</option>
-          </select>
+        <div id='map' class="col-md-6 p-0">
+
         </div>
-      </div>
+        <div class="col-md-6">
+            <h1 class="text-center">Google Maps App</h1>
+            <div class="form-group">
+                <label class="text-uppercase"><i class="glyphicon glyphicon-map-marker"></i> Indique una ciudad:</label>
+                	<select name="select" id="select" class="form-control">
+                    <option selected>Seleccione una ubicación</option>
+                    <option value="vdm">Viña del mar, Región Valparaíso</option>
+                    <option value="scl">Santiago, Región Metropolitana</option>
+                    <option value="ccp">Concepción, Región del Bíobio</option>
+                    <option value="pta">Punta Arenas, Región de Magallanes</option>
+                </select>
+            </div>
+
+            <h2 id="resumen" class="text-center"></h2>
+            <img src="" class="img-responsive">
+            <table class="table table-striped" hidden="true" id="escondido">
+                <tr>
+                    <td>Sensación térmica</td>
+                    <td id="sensacion"></td>
+                </tr>
+                <tr>
+                    <td>Probabilidad de lluvia</td>
+                    <td id="probabilidad"></td>
+                </tr>
+                <tr>
+                    <td>Humedad relativa</td>
+                    <td id="humedad"></td>
+                </tr>
+            </table>
+        </div>
     </div>
-  </div>
 
-
-
-
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
